@@ -64,7 +64,7 @@ public class KoszManager {
 	public void deletePilkiWKoszuByRozmiar(Kosz uklad, int kryterium){
 	
 		for (Pilka pilka : uklad.getpilki()) {
-			if(pilka.getrozmiar() == kryterium){
+			if(pilka.getrozmiar() > kryterium){
 				pilkaRepository.delete(pilka);
 			}
 		}

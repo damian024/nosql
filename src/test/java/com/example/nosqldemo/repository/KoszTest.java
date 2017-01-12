@@ -37,7 +37,7 @@ public class KoszTest {
 	private int rozmiarUnique = 9;
 	
 	private final int rozmiarUnique2 =2;
-	private final int kryterium = 5;
+	private final int kryterium = 1;
 	
 	//Kosz
 	private final String nazwaU1 = "Do nogi";
@@ -492,7 +492,7 @@ public class KoszTest {
 		
 		managerKosz.deletePilkiWKoszuByRozmiar(kosz1, kryterium);
 		
-		assertNotNull(managerpilki.getPilkaById(pilka1.getId()));
+		assertEquals(null,managerpilki.getPilkaById(pilka1.getId()));
 		assertEquals(null, managerpilki.getPilkaById(pilka2.getId()));
 		assertEquals(null, managerpilki.getPilkaById(pilka3.getId()));
 		
